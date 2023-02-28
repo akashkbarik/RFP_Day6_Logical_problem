@@ -58,21 +58,40 @@ public class Logical_Programs {
             System.out.println(perfNum + " is not a perfect number.");
         }
     }
+
     //      reverse number
-    public void Reverse_Number(){
+    public void Reverse_Number() {
         System.out.println("this is reverse number code\n...............................");
         System.out.println("Enter the number to be reversed :");
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
         int reverse = 0;
-        while(number != 0)
-        {
+        while (number != 0) {
             int remainder = number % 10;
             reverse = reverse * 10 + remainder;
-            number = number/10;
+            number = number / 10;
         }
         System.out.println("The reverse of the given number is : " + reverse);
 
     }
+
+    //    Stopwatch code
+    public void StopWatch() {
+        System.out.println("this is stopwatch code\n............................");
+        long start = 0, end = 0;
+        System.out.println("enter Enter button to start the time");
+        String input = sc.nextLine(); // stores user input
+
+        if (input.isEmpty()) { // enter key pressed
+            start = System.currentTimeMillis();
+        }
+
+        input = sc.nextLine();
+        if (input.isEmpty()) { // enter key pressed
+            end = System.currentTimeMillis();
+        }
+        System.out.println("Diffrence between two clicks is: " + ((int) (end - start) / 1000) + " seconds.");
+    }
 }
+
 
