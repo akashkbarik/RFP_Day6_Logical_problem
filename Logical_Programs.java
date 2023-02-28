@@ -58,6 +58,21 @@ public class Logical_Programs {
             System.out.println(perfNum + " is not a perfect number.");
         }
     }
-//
+    //      reverse number
+    public void Reverse_Number(){
+        System.out.println("this is reverse number code\n...............................");
+        System.out.println("Enter the number to be reversed :");
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        int reverse = 0;
+        while(number != 0)
+        {
+            int remainder = number % 10;
+            reverse = reverse * 10 + remainder;
+            number = number/10;
+        }
+        System.out.println("The reverse of the given number is : " + reverse);
 
+    }
 }
+
