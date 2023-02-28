@@ -40,5 +40,24 @@ public class Logical_Programs {
             break;
         }
     }
-//          perfect number
+
+    //          perfect number
+    public void Perfect_number() {
+        System.out.println("this perfect number code\n.......................");
+        int sum = 0;
+        System.out.print("Enter the number: ");
+        int perfNum = sc.nextInt();
+        for (int i = 1; i <= perfNum / 2; i++) {
+            if (perfNum % i == 0) {
+                sum += i;
+            }
+        }
+        if (sum == perfNum) {
+            System.out.println(perfNum + " is a perfect number.");
+        } else {
+            System.out.println(perfNum + " is not a perfect number.");
+        }
+    }
+//
+
 }
