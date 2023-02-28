@@ -1,13 +1,44 @@
 import java.util.Scanner;
 
 public class Logical_Programs {
-    Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         Logical_Programs lp = new Logical_Programs();
+        int ch;
+        do{
+            System.out.println("enter your choice");
 
+            System.out.println("1: fibonacci series");
+            System.out.println("2: prime number");
+            System.out.println("3: perfect number");
+            System.out.println("4: reverse number");
+            System.out.println("5: stopwatch");
+            System.out.println("6: exit");
+            ch=sc.nextInt();
 
-    }
+            switch (ch){
+                case 1:
+                    lp.fibonacci_series();
+                    break;
+                case 2:
+                    lp.Prime_Number();
+                    break;
+                case 3:
+                    lp.Perfect_number();
+                    break;
+                case 4:
+                    lp.Reverse_Number();
+                    break;
+                case 5:
+                    lp.StopWatch();
+                default:
+                    break;
+            }
+        }
+        while (ch!=6);
+
+        }
 
     //    fibonacci series
     public void fibonacci_series() {
@@ -92,6 +123,7 @@ public class Logical_Programs {
         }
         System.out.println("Diffrence between two clicks is: " + ((int) (end - start) / 1000) + " seconds.");
     }
+
 }
 
 
